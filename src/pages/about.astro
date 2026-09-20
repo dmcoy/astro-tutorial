@@ -1,4 +1,7 @@
 ---
+import '../styles/global.css'
+import Header from '../components/Header.astro';
+
 const pageTitle = "About Me";
 
 const identity = {
@@ -30,7 +33,6 @@ const textCase = "uppercase";
         <style define:vars={{skillColor, fontWeight, textCase}}>
             h1 {
                 color: purple;
-                font-size: 4rem;
             }
             .skill {
                 color: var(--skillColor);
@@ -40,9 +42,7 @@ const textCase = "uppercase";
         </style>
 	</head>
 	<body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
+        <Header/>
         <h1>{pageTitle}</h1>
         <p>Here are a few facts about me</p>
         <ul>
